@@ -11,5 +11,5 @@ select yn in "Yes" "No"; do
     esac
 done
 
-sed "1imaster: $1" /etc/salt/minion
+sed -i "1imaster: $1" /etc/salt/minion
 systemctl restart salt-minion
