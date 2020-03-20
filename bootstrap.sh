@@ -10,3 +10,6 @@ select yn in "Yes" "No"; do
         No ) exit;;
     esac
 done
+
+sed "1imaster: $1" /etc/salt/minion
+systemctl restart salt-minion
